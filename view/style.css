@@ -249,3 +249,22 @@ font {
 .dark-mode .svg-light {
     display: none;
 }
+
+html,
+body { 
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.dev-mode {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: #ffd500;
+    display: flex;
+    justify-content: center;
+}

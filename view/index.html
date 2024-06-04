@@ -87,7 +87,7 @@
     </header>
 
     <!--Номер станции, ваше имя (используется для быстрых заявлений), таймер от начала смены-->
-    <div class="container mt-3 mb-4">
+    <div class="container mt-3 mb-4" style="flex-grow: 1;">
         <div class="row">
             <div class="col-sm-4 mb-3">
                 <label for="station-number" class="form-label fw-bold">Станция</label>
@@ -539,6 +539,16 @@
 <script type="module" src="scripts/script.js"></script>
 <script type="module" src="scripts/updates.js"></script>
 <script type="module" src="scripts/profiles.js"></script>
+
+<script type="module">
+    if (!import.meta.env.PROD) {
+        const status = document.createElement('div');
+        status.classList.add('dev-mode');
+        status.textContent = `DEV MODE. TARGET: ${import.meta.env.VITE_WEB ? 'WEB' : 'CLIENT'}`;
+        document.body.appendChild(status);
+    }
+</script>
+
 </body>
 
 </html>
